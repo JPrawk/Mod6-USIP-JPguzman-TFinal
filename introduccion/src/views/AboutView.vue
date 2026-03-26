@@ -2,6 +2,8 @@
 import Props from "../components/Props.vue"
 import Emits from "../components/Emits.vue"
 import { ref } from 'vue'
+import Slot from "../components/Slot.vue"
+
 const miTitulo="curso de vue desde una variable";
 
 const valorRecibido = ref('');
@@ -16,13 +18,25 @@ const mostrarEvento = (event) => {
 <template>
   <div class="about">
     <h1>This is an <span>about</span> page</h1>
-    <Props :titulo="miTitulo"></Props>
+    <Props :titulo="miTitulo">valor</Props>
     <Emits @saludar="mostrarEvento($event)"></Emits>
     <pre>{{ valorRecibido }}</pre>
+    <h3>Ejemplo slot</h3>
+    
+    <Slot>
+      contenido en el slot
+    </Slot>
+
+    <Slot>
+      {{ miTitulo }}
+    </Slot>
+
+
   </div>
 </template>
 
 <style lang="scss">
+
 
 .about{
   color: orangered;
