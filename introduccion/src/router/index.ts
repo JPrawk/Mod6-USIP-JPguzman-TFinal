@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Computed from '../components/Computed.vue'
+import Interpolacion from '@/components/Interpolacion.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,6 +15,11 @@ const router = createRouter({
       path: '/computada',
       name: 'computada',
       component: Computed,
+    },
+    {
+      path: '/interpolacion',
+      name: 'interpolacion',
+      component: Interpolacion,
     },
     {
       path: '/about',
