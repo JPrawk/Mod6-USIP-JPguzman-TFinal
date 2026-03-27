@@ -15,6 +15,14 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/computada">Computed</RouterLink>
         <RouterLink to="/interpolacion">Interpolacion</RouterLink>
+        <RouterLink to="/vbind">v-bind</RouterLink>
+        <RouterLink to="/vmodel">v-model</RouterLink>
+        <RouterLink to="/vif">v-if</RouterLink>
+        <RouterLink to="/vfor">v-for</RouterLink>
+        <RouterLink to="/modificadores">modificadores</RouterLink>
+        <RouterLink to="/vhtml">vhtml</RouterLink>
+        <RouterLink to="/template">template</RouterLink>
+        <RouterLink to="/formulario">formulario</RouterLink>
       </nav>
     </div>
   </header>
