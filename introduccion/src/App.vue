@@ -23,6 +23,9 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/vhtml">vhtml</RouterLink>
         <RouterLink to="/template">template</RouterLink>
         <RouterLink to="/formulario">formulario</RouterLink>
+        <RouterLink to="/formulario-basico">formulario basico</RouterLink>
+        <RouterLink to="/formulario-watch">formulario watch</RouterLink>
+        <RouterLink to="/ejemplo-slot">ejemplo slot</RouterLink>
       </nav>
     </div>
   </header>

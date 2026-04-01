@@ -10,6 +10,9 @@ import Modificadores from '@/components/Modificadores.vue'
 import Vhtml from '@/components/Vhtml.vue'
 import Template from '@/components/Template.vue'
 import Formulario from '@/components/Formulario.vue'
+import FormBasico from '@/components/FormBasico.vue'
+import FormWatch from '@/components/FormWatch.vue'
+import EjeSlot from '@/views/EjeSlot.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -69,6 +72,21 @@ const router = createRouter({
       path: '/formulario',
       name: 'formulario',
       component: Formulario,
+    },
+    {
+      path: '/formulario-basico',
+      name: 'formularioBasico',
+      component: FormBasico,
+    },
+    {
+      path: '/formulario-watch',
+      name: 'formularioWatch',
+      component: FormWatch,
+    },
+    {
+      path: '/ejemplo-slot',
+      name: 'ejemploSlot',
+      component: EjeSlot,
     },
     {
       path: '/about',

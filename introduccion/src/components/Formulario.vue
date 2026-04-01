@@ -1,9 +1,9 @@
 
 <template>
-    <form @submit.prevent="enviar">
+    <form @submit.prevent="enviar()">
 
         <!-- Input texto -->
-        <input v-model="form.nombre" placeholder="Nombre"
+        <input v-model="form.nombre" :placeholder="`${prefijo} Nombre`"
             required
         >
 
@@ -66,4 +66,5 @@
         }
         
     };
+    const prefijo = "Ingrese: ";
 </script>
