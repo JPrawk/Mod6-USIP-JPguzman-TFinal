@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "email": "sergio@email.com",
+      "password": "$2a$10$g2Jxbmg5TDUVZp.8timXSOYZil6YMGhqxserGdVzHJKZUyNe5Wqhu",
+      "name": "sergio",
+      "id": 1
+    }
+  ],
+  "notes": [
+    {
+      "userId": 1,
+      "title": "nota 1",
+      "content": "contenido nota 1",
+      "completed": true,
+      "createdAt": "2026-04-02",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "title": "titulo 2",
+      "content": "nuevo",
+      "completed": false,
+      "createdAt": "2026-04-02",
+      "id": 2
+    }
+  ]
+}
