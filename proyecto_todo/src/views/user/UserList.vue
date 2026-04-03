@@ -96,6 +96,7 @@ onMounted(async () => {
                         <button class="btn btn-primary btn-sm" @click="showEditModal(item)">editar</button>
                         <button class="btn btn-danger btn-sm" @click="deleteItem(item)">eliminar</button>
                         <button class="btn btn-info btn-sm" @click="showNotes(item)">Ver Notas</button>
+                        <router-link :to="`/usuario/${item.id}/notes`">Ver Notas</router-link> 
                     </td>
                 </tr>
             </tbody>

@@ -56,6 +56,10 @@
         await load();
     };
 
+    const filter = async () => {
+        await load();
+    };
+
     onMounted(async () => {
         await load();
     });
@@ -100,7 +104,7 @@
         </form>
     </div>
     <div style="margin: 20px 0">
-        <form @submit.prevent="search()">
+        <form @submit.prevent="filter()">
             <div class="input-group">
                 <select v-model="filterOptionSelected" class="form-control" >
                     <option value="">Filtrar por completado</option>
@@ -128,7 +132,7 @@
                 <td>{{ item.id }}</td>
                 <td>{{ item.title }}</td>
                 <td>{{ item.content }}</td>
-                <td>{{ item.completed }}</td>
+                <td>{{ item.completed ? 'Si' : 'No' }}</td>
                 <td>{{ item.createdAt }}</td>
                 <td>{{ item?.user?.name }}</td>
                 <td>
