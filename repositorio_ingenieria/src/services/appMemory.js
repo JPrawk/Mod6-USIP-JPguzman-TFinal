@@ -29,7 +29,11 @@ class AppMemory {
         if (!this.state[key]) {
             const stored = localStorage.getItem(key);
             if (stored) {
-                this.state[key] = JSON.parse(stored);
+                try {
+                    this.state[key] = JSON.parse(stored);
+                } catch (e) {
+                    this.state[key] = stored;
+                }
             }
         }
 

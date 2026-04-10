@@ -57,8 +57,8 @@
   
   <script setup>
   import { ref } from 'vue';
-  import { register } from '@/services/authService';
-  
+  import api from '@/services/api';
+
   const name = ref('');
   const email = ref('');
   const password = ref('');
@@ -128,10 +128,16 @@
   
       loading.value = true;
   
-      const user = await register(name.value, email.value, password.value);
-  
-      console.log('Usuario registrado:', user);
-  
+      const res = await api.post('/register', {
+        name: name.value,
+        email: email.value,
+        password: password.value
+      });
+
+      localStorage.setItem('token', res.data.accessToken);
+
+      console.log('Usuario registrado:', res.data.user);
+
       // Redirigir
       window.location.href = '/';
   

@@ -43,8 +43,11 @@
   
   <script setup>
   import { ref } from 'vue';
+  import { useRoute } from 'vue-router';
   import api from '@/services/api'
   import appMemory from '@/services/appMemory';
+
+  const route = useRoute();
   
   const email = ref('');
   const password = ref('');
@@ -111,8 +114,9 @@
 
       appMemory.set('userName', user.data.user.name, true);
       appMemory.set('userId', user.data.user.id, true);
-      // redirigir
-      window.location.href = '/';
+      // redirigir a la página original o al inicio
+      const redirect = route.query.redirect || '/';
+      window.location.href = redirect;
 
     } catch (error) {
       errorGeneral.value = 'Credenciales incorrectas';
